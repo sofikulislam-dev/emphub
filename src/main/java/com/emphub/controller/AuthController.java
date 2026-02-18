@@ -35,8 +35,7 @@ public class AuthController {
     @PostMapping("/admin/login")
     public String adminLogin(@RequestParam("username") String username,
                              @RequestParam("password") String password,
-                             HttpSession session,
-                             Model model) {
+                             HttpSession session, Model model) {
 
         Admin admin = adminService.login(username, password);
 

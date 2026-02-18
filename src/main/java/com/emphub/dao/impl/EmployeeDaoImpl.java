@@ -42,6 +42,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
         @Override
         public Employee mapRow(ResultSet rs, int rowNum) throws SQLException {
+
             Employee e = new Employee();
             e.setId(rs.getInt("id"));
             e.setName(rs.getString("name"));
@@ -50,6 +51,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
             e.setDepartment(rs.getString("department"));
             e.setDesignation(rs.getString("designation"));
             e.setJoinDate(rs.getDate("join_date").toLocalDate());
+
             return e;
         }
     };
